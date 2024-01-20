@@ -41,7 +41,7 @@ client.on('threadCreate', async (thread) => {
                         db.add(`staff_${m.author.id}`, 1)
                     }
                     db.add(`staff_${m.author.id}`, 1);
-                    msg.edit({ content: msg.content + `\n> Zajebany Przez: ${m.author} (\`${(finalDate - firstDate) < 10000 ? `⛔ Ctrl + c Detected ! ⛔ ` : "" + ((finalDate - firstDate) / 1000).toFixed(2)} sec\`) , Ilość Zrobionych Ticketów: (${db.get(`staff_${m.author.id}`)} Ticket)\n=================================================` });
+                    msg.edit({ content: msg.content + `\n> Stealed By: ${m.author} (\`${(finalDate - firstDate) < 10000 ? `⛔ Ctrl + c Detected ! ⛔ ` : "" + ((finalDate - firstDate) / 1000).toFixed(2)} sec\`) , Ilość Zrobionych Ticketów: (${db.get(`staff_${m.author.id}`)} Ticket)\n=================================================` });
                     collector.stop();
                 }
             });
